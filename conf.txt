@@ -1,0 +1,24 @@
+#设置代理池,格式: ProxyPool 代理池类型 代理池URL
+#目前支持: https://github.com/jhao104/proxy_pool; https://github.com/Python3WebSpider/ProxyPool
+#Python3WebSpider/ProxyPool 因为没有批量获取接口，故随机获取不同的IP,样例: ProxyPool Python3WebSpider/ProxyPool https://proxypool.scrape.center 30 ,表示随机获取30个不通的父级代理地址
+ProxyPool jhao104/proxy_pool http://180.76.169.220:5010
+#ProxyPool Python3WebSpider/ProxyPool https://proxypool.scrape.center 30
+
+#Proxy Server 基础设置
+
+#HTTP Proxy监听的地址
+ProxyServerAddress 127.0.0.1:8080
+
+#可变父级代理本地流量转发的工作端口
+EndProxyServerAddress 127.0.0.1:48901
+
+#父级代理切换规则
+#Time: 按时间进行切换,样例: ProxyRule Time 300 ,表示每300秒切换一个父级代理
+#Romdom: 每个请求都是随机的父级代理,样例: ProxyRule Romdom
+#Next: 每当程序检测当前父级代理无法正常访问验证目标时,自动随机切换一个父级代理,样例: ProxyRule Next 10 ,表示每10秒检测一次是否可以正常访问目标
+#Once: 程序启动时随机获取一个父级代理并保持不变,重启后自动更换,样例: ProxyRule Once
+#Static: 指定某个特定的父级代理服务器,样例: ProxyRule Static 127.0.0.1:8080
+ProxyRule Next 10
+
+#父级代理验证目标地址
+CheckTarget https://ip.hao86.com/
