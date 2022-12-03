@@ -11,7 +11,7 @@ proxy_pool： https://github.com/jhao104/proxy_pool
 
 ProxyPool： https://github.com/Python3WebSpider/ProxyPool
 
-![](https://github.com/leeli73/ProxySwitch/blob/master/img.png)
+![](https://github.com/leeli73/ProxySwitch/blob/main/img.png)
 
 上面是Proxy Switch的预览效果，本地监听8080端口，启动了一个HTTP代理服务器，从代理池中获取了54个地址，程序通过对目标地址访问状态的验证，本地HTTP代理服务器自动将流量转发至对应的远程HTTP代理服务器。
 
